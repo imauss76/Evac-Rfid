@@ -17,4 +17,17 @@ class SolicitarAcessoInterno extends Model
         'fator_rh',
         'contra_indicacao'
     ];
+    
+    public function user()
+    {
+        return $this->belongsTo('App\User','id','usuario_interno');
+    }
+
+    public function somentePermitidos($setor) {
+        $data = User::whereNotExist('status', '<>', $setor)
+        ->groupBy('status')
+        ->get();
+
+        return $data
+    }
 }
