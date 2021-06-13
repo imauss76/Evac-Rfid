@@ -18,7 +18,7 @@ class ResetPassword extends Notification
      *
      * @return void
      */
-    public function __construct($token)
+    public function construct($token)
     {
         $this->token = $token;
     }
@@ -44,9 +44,9 @@ class ResetPassword extends Notification
     {
         return (new MailMessage)
                     ->subject('Alterar Senha')
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+                    ->line('Você está recebendo este e-mail porque recebemos um pedido de redefinição de senha para sua conta.')
+                    ->action('Resetar Senha', url('/atualizar', $this->token, false))
+                    ->line('Se você não solicitou uma alteração de senha, nenhuma ação é necessária!');
     }
 
     /**

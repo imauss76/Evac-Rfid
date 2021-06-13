@@ -107,3 +107,9 @@ Route::get('arqui', function () {
 Route::get('arquv', function () {
     return view('/Arquivos/arquivoUV');
 });
+
+/** Rota para ATUALIZAR SENHA DO USUÁRIO */
+
+Route::get('/atualizar', function () {
+    return view('/auth/passwords.reset');
+});
