@@ -26,8 +26,8 @@
               
                 <tr>
                     <td>{{ $solicitarAcessoInterno->matricula }}</td>
-                    <td>{{ $solicitarAcessoInterno->usuario_interno }}</td>
-                    <td>{{ $solicitarAcessoInterno->setor_alocado }}</td>
+                    <td>{{ $solicitarAcessoInterno->user->name }}</td>
+                    <td>{{ $solicitarAcessoInterno->setor->nome }}</td>
                     <td>
                         <ul class="list-inline">
 

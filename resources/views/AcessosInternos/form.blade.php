@@ -13,9 +13,6 @@
         <select name="usuario_interno" id="usuario_interno" style="width: 250px; background: #DCDCDC; border-radius: 6px; padding: 4px; cursor: pointer;
             color: black; border: none; font-size: 14px;">
             <option selected></option>
-            <!-- @foreach( $somentePermitidos as $sp)
-             <option value="{{ $sp->id}}">{{$sp->name}} </option> 
-            @endforeach -->
                 <?php
                 $conn = mysqli_connect('localhost','root','','evac-rfid')or die(mysqli_error());
                 mysqli_set_charset($conn,'utf8')or die(mysqli_error($conn));

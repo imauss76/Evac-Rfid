@@ -25,9 +25,7 @@ class SolicitarAcessoInternoController extends Controller
      */
     public function create()
     {
-        $somentePermitidos = SolicitarAcessoInterno::paginate(5)->somentePermitidos(1);
-
-        return view('AcessosInternos.create', compact('somentePermitidos')]);
+        return view('AcessosInternos.create', ['action'=>route('solicitarAcessoInterno.store'), 'method'=>'post']);
     }
 
     /**

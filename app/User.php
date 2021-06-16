@@ -48,6 +48,6 @@ class User extends Authenticatable
 
     public function solicitarAcessoInterno()
     {
-        return $this->belongsTo('App\SolicitarAcessoInterno', "usuario_interno");
+        return $this->belongsTo('App\SolicitarAcessoInterno', 'id', 'usuario_interno');
     }
 }
